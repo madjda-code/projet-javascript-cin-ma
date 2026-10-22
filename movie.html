@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cinéma - Détails du film</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<header class="header">
+		<h1>🎬 Cinéma</h1>
+		<nav class="nav">
+			<a href="index.html">Accueil</a>
+			<a href="search.html">Recherche</a>
+		</nav>
+        <!-- pour les yeux--> 
+		<button id="theme-toggle" class="theme-toggle">Mode sombre</button>
+	</header>
+    
+	<main class="container">
+        <!-- pour le retour à l'autre page -->
+		<a href="index.html" class="back">← Retour à l'accueil</a>
+        <!-- detailles du filme -->
+		<p id="message" class="message"></p>
+		<article id="movie" class="movie hidden">
+			<img id="poster" class="poster hidden" alt="">
+			<div class="movie-info">
+				<h2 id="title"></h2>
+				<p class="meta"><span id="year"></span> · <span id="runtime"></span> · <span id="rated"></span></p>
+				<p><strong>Genre :</strong> <span id="genre"></span></p>
+				<p><strong>Réalisateur :</strong> <span id="director"></span></p>
+				<p><strong>Acteurs :</strong> <span id="actors"></span></p>
+				<p><strong>Langue :</strong> <span id="language"></span></p>
+				<h3>Résumé</h3>
+				<p id="plot"></p>
+				<h3>Récompenses</h3>
+				<p id="awards"></p>
+				<h3>Notes</h3>
+				<ul id="ratings"></ul>
+			</div>
+		</article>
+	</main>
+
+	<footer class="footer">
+		<p>Cinéma du village · Données fournies par <a href="https://www.omdbapi.com/">OMDb API</a></p>
+		<p>Mini-projet réalisé en HTML, CSS et JavaScript · © 2026</p>
+	</footer>
+    <!-- pour ouvrir la page par un serveur local --> 
+	<script>
+		if (location.protocol === "file:") {
+			document.getElementById("message").textContent = "Ouvrez le site avec Live Server ou npm start (pas en double-cliquant sur le fichier).";
+		}
+	</script>
+	<script type="module" src="js/movie.js"></script>
+</body>
+</html>

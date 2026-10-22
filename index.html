@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cinéma - Accueil</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header class="header">
+		<h1>🎬 Cinéma</h1>
+		<nav class="nav">
+			<a href="index.html" class="active">Accueil</a>
+			<a href="search.html">Recherche</a>
+		</nav>
+        <!-- pour les yeux-->
+		<button id="theme-toggle" class="theme-toggle">Mode sombre</button>
+	</header>
+	<main class="container">
+		<section class="hero">
+            <!-- pour le bienvenue -->
+			<h2>Bienvenue au cinéma</h2>
+			<p>Bienvenue dans ton nouveau repaire de cinéphile ! On t'a déniché le meilleur de 2024. À toi de juger le chef-d'œuvre ! </p>
+			<p>Tu as un film précis en tête ? Fonce faire un tour sur la page <a href="search.html">Recherche</a>.</p>
+		</section>
+        <!-- pour le top 3 et les films tendances par la base de données -->
+		<h2>Notre top 3 du moment</h2>
+		<div id="top" class="grid"></div>
+		<h2>Films tendances de 2024</h2>
+		<p id="message" class="message"></p>
+		<div id="movies" class="grid"></div>
+		<button id="load-more" class="button hidden">Charger plus de films de 2024</button>
+	</main>
+	<footer class="footer">
+		<p>Cinéma du village · Données fournies par <a href="https://www.omdbapi.com/">OMDb API</a></p>
+		<p>Mini-projet réalisé en HTML, CSS et JavaScript · © 2026</p>
+	</footer>
+	<script>
+		if (location.protocol === "file:") {
+			document.getElementById("message").textContent = "Ouvrez le site avec Live Server ou npm start (pas en double-cliquant sur le fichier).";
+		}
+	</script>
+	<script type="module" src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cinéma - Recherche</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header class="header">
+		<h1>🎬 Cinéma</h1>
+		<nav class="nav">
+			<a href="index.html">Accueil</a>
+			<a href="search.html" class="active">Recherche</a>
+		</nav>
+        <!-- pour les yeux--> 
+		<button id="theme-toggle" class="theme-toggle">Mode sombre</button>
+	</header>
+	<main class="container">
+		<section class="hero">
+			<h2>Rechercher un film</h2>
+			<p>Dégaine ton clavier : les résultats débarquent en direct, plus vite que ton ombre (et surtout sans rechargement).</p>
+		</section>
+		
+        <!-- pour chercher le filme -->
+		<label for="search-input">Titre du film</label>
+		<input id="search-input" class="search" type="text" placeholder="Ex : Guardians of the Galaxy" autocomplete="off">
+		<p id="message" class="message"></p>
+		<div id="results" class="grid"></div>
+		<button id="load-more" class="button hidden">Charger plus de résultats</button>
+		
+	</main>
+	<footer class="footer">
+		<p>Cinéma du village · Données fournies par <a href="https://www.omdbapi.com/">OMDb API</a></p>
+		<p>Mini-projet réalisé en HTML, CSS et JavaScript · © 2026</p>
+	</footer>
+	<script>
+		if (location.protocol === "file:") {
+			document.getElementById("message").textContent = "Ouvrez le site avec Live Server ou npm start (pas en double-cliquant sur le fichier).";
+		}
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+	<script type="module" src="js/search.js"></script>
+</body>
+</html>
