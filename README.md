@@ -3,6 +3,6 @@
 Dépôt GitHub : cin 
 clé OMDb : ee7eea18.
 
-langages utillisée: HTML ,CSS ,Javascript.
+langages utillisée: HTML ,CSS ,Javascrip
 
 
